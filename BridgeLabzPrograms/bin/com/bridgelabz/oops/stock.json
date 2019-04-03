@@ -1,0 +1,76 @@
+{"Stock":[
+	
+		{
+			"Stock_Name":"ISRO",
+			"Number_of_shares":"35",
+			"Share_Prize":52000
+			},
+				{
+			"Stock_Name":"BHEL",
+			"Number_of_shares":"35",
+			"Share_Prize":2300
+			},
+			{
+			"Stock_Name":"TCS",
+			"Number_of_shares":"35",
+			"Share_Prize":1000
+			},
+				{
+			"Stock_Name":"SAIL",
+			"Number_of_shares":"55",
+			"Share_Prize":10560
+			},
+				{
+			"Stock_Name":"HAL",
+			"Number_of_shares":"35",
+			"Share_Prize":1450
+			},
+				{
+			"Stock_Name":"JIO",
+			"Number_of_shares":"55",
+			"Share_Prize":10123
+			},
+			{
+			"Stock_Name":"WIPRO",
+			"Number_of_shares":"58",
+			"Share_Prize":25
+			},
+			
+			
+			{
+			"Stock_Name":"INFOSYS",
+			"Number_of_shares":"37",
+			"Share_Prize":6222
+			},
+			{
+			"Stock_Name":"Accenture",
+			"Number_of_shares":"45",
+			"Share_Prize":13244
+				
+			}
+			, {
+            "Stock_Name":"Aditya Birla G",
+            "Number_of_shares":45,
+            "Share_Prize":179845
+               
+            },
+{
+            "Stock_Name":"BSNL",
+            "Number_of_shares":45,
+            "Share_Prize":1456
+               
+            },
+{
+            "Stock_Name":"State Banks",
+            "Number_of_shares":45,
+            "Share_Prize":1056
+               
+            },
+{
+            "Stock_Name":"ICICI",
+            "Number_of_shares":45,
+            "Share_Prize":1150
+               
+            }
+           ]
+    }

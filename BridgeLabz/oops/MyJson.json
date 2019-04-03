@@ -1,0 +1,16 @@
+{"Rice":
+[{"name":"Basmati Rice","weight":10,"price":110},
+{"name":"White Rice","weight":50,"price":50},
+
+{"name":"Brown Rice","weight":25,"price":140}
+],
+"Pulses":
+[{"name":"Lobiae","weight":10,"price":60},
+{"name":"Chickpeas","weight":25,"price":100},
+{"name":"Green Gram","weight":25,"price":140}
+],
+"Wheat":
+[{"name":"Puja Tejas","weight":50,"price":40},
+{"name":"Pusa Malawi","weight":50,"price":30},
+{"name":"Pusa Ujala","weight":25,"price":60}
+]}

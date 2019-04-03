@@ -1,0 +1,11 @@
+[ {
+  "name" : "XYX",
+  "numberOfShares" : 21,
+  "price" : 23.0,
+  "symbol" : "XYX"
+}, {
+  "name" : "fds",
+  "numberOfShares" : 32,
+  "price" : 23.0,
+  "symbol" : "FDS"
+} ]
