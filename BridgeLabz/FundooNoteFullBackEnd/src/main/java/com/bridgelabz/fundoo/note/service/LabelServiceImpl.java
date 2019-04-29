@@ -46,9 +46,7 @@ public class LabelServiceImpl implements ILabelService{
 	@Autowired
 	private Environment environment;
 	
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.fundoo.label.service.ILabelService#createLabel(com.bridgelabz.fundoo.label.dto.LabelDto, java.lang.String)
-	 */
+
 	@Override
 	public Response createLabel(LabelDto labelDto, String token) {
 		long userId = userToken.decodeToken(token);
@@ -77,9 +75,7 @@ public class LabelServiceImpl implements ILabelService{
 	return response;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.fundoo.label.service.ILabelService#deleteLabel(long, java.lang.String)
-	 */
+
 	@Override
 	public Response deleteLabel(long labelId, String token) {
 		long userId = userToken.decodeToken(token);
@@ -99,9 +95,7 @@ public class LabelServiceImpl implements ILabelService{
 
 	}
 
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.fundoo.label.service.ILabelService#updateLabel(long, java.lang.String, com.bridgelabz.fundoo.label.dto.LabelDto)
-	 */
+
 	@Override
 	public Response updateLabel(long labelId , String token ,LabelDto labelDto) {
 		long userId = userToken.decodeToken(token);
@@ -129,9 +123,7 @@ public class LabelServiceImpl implements ILabelService{
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.fundoo.label.service.ILabelService#getAllLabel(java.lang.String)
-	 */
+
 	@Override
 	public List<LabelDto> getAllLabel(String token) {
 		long userId = userToken.decodeToken(token);
@@ -149,9 +141,7 @@ public class LabelServiceImpl implements ILabelService{
 		return listLabel;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.fundoo.label.service.ILabelService#addNoteToLabel(long, java.lang.String, long)
-	 */
+
 	@Override
 	public Response addLabelToNote(long labelId, String token , long noteId) {
 		long userId = userToken.decodeToken(token);
@@ -185,9 +175,7 @@ public class LabelServiceImpl implements ILabelService{
 
 	
 
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.fundoo.label.service.ILabelService#removeLabelFromNote(long, java.lang.String, long)
-	 */
+
 	@Override
 	public Response removeLabelFromNote(long labelId ,String token , long noteId) {
 		long userId = userToken.decodeToken(token);
@@ -216,9 +204,6 @@ public class LabelServiceImpl implements ILabelService{
 
 	}
 
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.fundoo.label.service.ILabelService#getLebelsOfNote(java.lang.String, long)
-	 */
 	@Override
 	public List<LabelDto> getLebelsOfNote(String token, long noteId) {
 		long userId = userToken.decodeToken(token);
@@ -241,9 +226,7 @@ public class LabelServiceImpl implements ILabelService{
 		
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.fundoo.notes.service.ILabelService#getNotesOfLabel(java.lang.String, long)
-	 */
+	
 	@Override
 	public List<NotesDto> getNotesOfLabel(String token, long labelId) {
 		long userId = userToken.decodeToken(token);

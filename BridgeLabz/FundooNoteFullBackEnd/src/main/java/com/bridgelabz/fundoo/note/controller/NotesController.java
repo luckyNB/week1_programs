@@ -38,12 +38,7 @@ public class NotesController {
 	@Autowired
 	private INotesService noteService;
 	
-	/**
-	 * Purpose : Function for creating notes
-	 * @param notesDto
-	 * @param token
-	 * @return
-	 */
+
 	@PostMapping("/create")
 	public ResponseEntity<Response> creatingNote(@RequestBody NotesDto notesDto , @RequestHeader String token){
 		logger.info(notesDto.toString());
@@ -51,13 +46,7 @@ public class NotesController {
 		return new ResponseEntity<Response>(responseStatus,HttpStatus.OK);
 	}
 	
-	/**
-	 * Purpose : Function for updating notes
-	 * @param notesDto
-	 * @param token
-	 * @param noteId
-	 * @return
-	 */
+
 	@PutMapping("/update")
 	public ResponseEntity<Response> updatingNote(@RequestBody NotesDto notesDto , @RequestHeader String token , @RequestParam long noteId){
 		logger.info(notesDto.toString());
@@ -65,93 +54,55 @@ public class NotesController {
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.ACCEPTED);
 	}
 	
-	
-	/**
-	 * Purpose : Function for deleting notes
-	 * @param token
-	 * @param noteId
-	 * @return
-	 */
+
 	@PutMapping("/delete")
 	public ResponseEntity<Response> deletingNote(@RequestHeader String token ,@RequestParam long noteId){
 		Response responseStatus = noteService.delete(token, noteId);
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
 	}
 
-	/**
-	 * Purpose : Function to get all the notes
-	 * @param token
-	 * @return
-	 */
+
 	@GetMapping("/getallnotes")
 	public List<NotesDto>  getAllNotes(@RequestHeader String token) {
 		List<NotesDto> listnotes = noteService.getAllNotes(token);
 		return listnotes;
 	}
 	
-	/**
-	 * Purpose : Function to pin or unpin notes 
-	 * @param token
-	 * @param noteId
-	 * @return
-	 */
+
 	@PutMapping("/pin")
 	public ResponseEntity<Response> pinNote(@RequestHeader String token , @RequestParam long noteId){
 		Response responseStatus = noteService.pinAndUnPin(token, noteId);
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
 	}
 	
-	/**
-	 * Purpose : Function to archive or unarchive notes 
-	 * @param token
-	 * @param noteId
-	 * @return
-	 */
+
 	@PutMapping("/archive")
 	public ResponseEntity<Response> archiveNote(@RequestHeader String token , @RequestParam long noteId){
 		Response responseStatus = noteService.archiveAndUnArchive(token, noteId);
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
 	}
 	
-	/**
-	 * Purpose : Function to trash or untrash notes 
-	 * @param token
-	 * @param noteId
-	 * @return
-	 */
+
 	@PutMapping("/trash")
 	public ResponseEntity<Response> trashNote(@RequestHeader String token, @RequestParam long noteId){
 		Response responseStatus = noteService.trashAndUnTrash(token, noteId);
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
 	}
-	/**
-	 * Purpose : Function to delete notes permanently
-	 * @param token
-	 * @param noteId
-	 * @return
-	 */
+	
 	@DeleteMapping("/delete")
 	public ResponseEntity<Response> deleteNote(@RequestHeader String token, @RequestParam long noteId){
 		Response responseStatus = noteService.deletePermanently(token, noteId);
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
 	}
 
-	/**
-	 * Purpose : Function to get all archive notes 
-	 * @param token
-	 * @return
-	 */
+	
 	@GetMapping("/getarchivenotes")
 	public List<NotesDto>  getArchiveNotes(@RequestHeader String token) {
 		List<NotesDto> listnotes = noteService.getArchiveNotes(token);
 		return listnotes;
 	}
 	
-	/**
-	 * Purpose : Function to get all trash notes 
-	 * @param token
-	 * @return
-	 */
+
 	@GetMapping("/gettrashnotes")
 	public List<NotesDto>  getTrashNotes(@RequestHeader String token) {
 		List<NotesDto> listnotes = noteService.getTrashNotes(token);

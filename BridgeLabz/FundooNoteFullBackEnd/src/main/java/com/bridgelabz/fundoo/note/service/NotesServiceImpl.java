@@ -44,13 +44,6 @@ public class NotesServiceImpl implements INotesService {
 	@Autowired
 	private Environment environment;
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.bridgelabz.fundoo.notes.service.INotesService#createNote(com.bridgelabz.
-	 * fundoo.notes.dto.NotesDto, java.lang.String)
-	 */
 	@Override
 	public Response createNote(NotesDto notesDto, String token) {
 
@@ -78,13 +71,7 @@ public class NotesServiceImpl implements INotesService {
 		
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.bridgelabz.fundoo.notes.service.INotesService#updateNote(com.bridgelabz.
-	 * fundoo.notes.dto.NotesDto, java.lang.String, long)
-	 */
+
 	@Override
 	public Response updateNote(NotesDto notesDto, String token, long noteId) {
 		if (notesDto.getTitle().isEmpty() && notesDto.getDescription().isEmpty()) {
@@ -106,13 +93,7 @@ public class NotesServiceImpl implements INotesService {
 		
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.bridgelabz.fundoo.notes.service.INotesService#delete(java.lang.String,
-	 * long)
-	 */
+
 	@Override
 	public Response delete(String token, long noteId) {
 		long id = userToken.decodeToken(token);
@@ -145,12 +126,7 @@ public class NotesServiceImpl implements INotesService {
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.bridgelabz.fundoo.notes.service.INotesService#getAllNotes(java.lang.
-	 * String)
-	 */
+
 	@Override
 	public List<NotesDto> getAllNotes(String token) {
 		long id = userToken.decodeToken(token);
@@ -166,12 +142,7 @@ public class NotesServiceImpl implements INotesService {
 		return listNotes;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.bridgelabz.fundoo.notes.service.INotesService#pinAndUnPin(java.lang.
-	 * String, long)
-	 */
+
 	@Override
 	public Response pinAndUnPin(String token, long noteId) {
 		long id = userToken.decodeToken(token);
@@ -200,13 +171,7 @@ public class NotesServiceImpl implements INotesService {
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.bridgelabz.fundoo.notes.service.INotesService#archiveAndUnArchive(java.
-	 * lang.String, long)
-	 */
+
 	@Override
 	public Response archiveAndUnArchive(String token, long noteId) {
 		long id = userToken.decodeToken(token);
@@ -235,13 +200,7 @@ public class NotesServiceImpl implements INotesService {
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.bridgelabz.fundoo.notes.service.INotesService#trashAndUnTrash(java.lang.
-	 * String, long)
-	 */
+
 	@Override
 	public Response trashAndUnTrash(String token, long noteId) {
 		long id = userToken.decodeToken(token);
@@ -265,13 +224,7 @@ public class NotesServiceImpl implements INotesService {
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.bridgelabz.fundoo.notes.service.INotesService#deletePermanently(java.lang
-	 * .String, long)
-	 */
+
 	@Override
 	public Response deletePermanently(String token, long noteId) {
 		long id = userToken.decodeToken(token);
@@ -292,13 +245,7 @@ public class NotesServiceImpl implements INotesService {
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.bridgelabz.fundoo.notes.service.INotesService#getArchiveNotes(java.lang.
-	 * String)
-	 */
+
 	@Override
 	public List<NotesDto> getArchiveNotes(String token) {
 		long id = userToken.decodeToken(token);
@@ -313,13 +260,6 @@ public class NotesServiceImpl implements INotesService {
 		return listNotes;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.bridgelabz.fundoo.notes.service.INotesService#getTrashNotes(java.lang.
-	 * String)
-	 */
 	@Override
 	public List<NotesDto> getTrashNotes(String token) {
 		long id = userToken.decodeToken(token);
